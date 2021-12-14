@@ -72,26 +72,26 @@ You need to download the pretrained checkpoint and run:
 python3 evaluate.py --model_dir=./experiments/experiment_omnet --restore_file=./experiments/experiment_omnet/val_model_best.pth
 ```
 
-The following table shows our performance on ModelNet40, where `val` and `test` indicate  `Unseen Shapes` and `Unseen Categories` respectively. `PRNet` and `RPMNet` indicate the partial manners used in [PRNet]() and [RPMNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf) respectively.
+The following table shows our performance on ModelNet40, where `val` and `test` indicate  `Unseen Shapes` and `Unseen Categories` respectively. `PRNet` and `RPMNet` indicate the partial manners used in [PRNet](https://arxiv.org/pdf/1910.12240.pdf) and [RPMNet](https://openaccess.thecvf.com/content_CVPR_2020/papers/Yew_RPM-Net_Robust_Point_Matching_Using_Learned_Features_CVPR_2020_paper.pdf) respectively.
 
-|          dataset          |     | RMSE(R) | MAE(R) | RMSE(t) | MAE(t) | Error(R) | Error(t) |                                           checkpoint                                           |
-| :------------------------: | :--: | :-----: | :----: | :-----: | :----: | :------: | :------: | :---------------------------------------------------------------------------------------------: |
-| ModelNet40_OS_PRNet_clean | val |  0.912  | 0.339 | 0.0078 | 0.0049 |  0.639  |  0.0099  | [Google Drive](https://drive.google.com/file/d/1i6nsSPFriGYxD1rDGTpbtTBYmdQcT8St/view?usp=sharing) |
-|                           | test |  2.247  | 0.652 | 0.0177 | 0.0077 |  1.241  |  0.0154  | [Google Drive](https://drive.google.com/file/d/1LTR4rCT4eQ6JXXOekeUjhXQpwhlh9NEY/view?usp=sharing) |
-| ModelNet40_TS_PRNet_clean | val |  1.032  | 0.506 | 0.0085 | 0.0057 |  0.984  |  0.0113  | [Google Drive](https://drive.google.com/file/d/1AdutxYe7FS88uoLMf7V6Mo9Tlb9hSDlF/view?usp=sharing) |
-|                           | test |  2.372  | 0.974 | 0.0146 | 0.0077 |  1.892  |  0.0152  | [Google Drive](https://drive.google.com/file/d/1A-6xTPGPAbmnwbnt81NjhN6Mw9VMHmwN/view?usp=sharing) |
-| ModelNet40_OS_PRNet_noise | val |  1.029  | 0.573 | 0.0089 | 0.0061 |  1.077  |  0.0123  | [Google Drive](https://drive.google.com/file/d/1JbBlBW08PQrucbdpp-G-VlWdjlik6tO7/view?usp=sharing) |
-|                           | test |  2.318  | 0.957 | 0.0155 | 0.0078 |  1.809  |  0.0156  | [Google Drive](https://drive.google.com/file/d/154xYpstuQJ0eDk3rqbDShg5P5b17xlry/view?usp=sharing) |
-| ModelNet40_TS_PRNet_noise | val |  1.314  | 0.771 | 0.0102 | 0.0074 |  1.490  |  0.0148  | [Google Drive](https://drive.google.com/file/d/1ZzetsjHC4POh8Irr1RfSl8boPJvCQFMx/view?usp=sharing) |
-|                           | test |  2.443  | 1.189 | 0.0181 | 0.0097 |  2.311  |  0.0193  | [Google Drive](https://drive.google.com/file/d/1eHi9pzAmL3jrYGmv6X9xy-8U7hAw9OdI/view?usp=sharing) |
-| ModelNet40_OS_RPMNet_clean | val |  0.771  | 0.277 | 0.0154 | 0.0056 |  0.561  |  0.0122  | [Google Drive](https://drive.google.com/file/d/1_wGJTxaezFvb4xqABmFfrIR03Wq2c80U/view?usp=sharing) |
-|                           | test |  3.719  | 1.314 | 0.0392 | 0.0151 |  2.659  |  0.0321  | [Google Drive](https://drive.google.com/file/d/1IQ0DZ_OmaZPErPqm4DJ4NBWfnt1d1YG5/view?usp=sharing) |
-| ModelNet40_TS_RPMNet_clean | val |  1.401  | 0.544 | 0.0241 | 0.0095 |  1.128  |  0.0202  | [Google Drive](https://drive.google.com/file/d/1IlUSzGoAXHzon5ZrwLPNBsTuICphhrAO/view?usp=sharing) |
-|                           | test |  4.016  | 1.622 | 0.0419 | 0.0184 |  3.205  |  0.0394  | [Google Drive](https://drive.google.com/file/d/1NJZcfHoXlCFTMVz01ZACiiTMNUEW1QQC/view?usp=sharing) |
-| ModelNet40_OS_RPMNet_noise | val |  0.998  | 0.555 | 0.0172 | 0.0078 |  1.079  |  0.0167  | [Google Drive](https://drive.google.com/file/d/1LvhPwrtUs-A2AZWO1YgrvhgcxdZXTen-/view?usp=sharing) |
-|                           | test |  3.572  | 1.570 | 0.0391 | 0.0172 |  3.073  |  0.0359  | [Google Drive](https://drive.google.com/file/d/1xnHcKikXs8D9UuGchwo3YK21vG86zRtp/view?usp=sharing) |
-| ModelNet40_TS_RPMNet_noise | val |  1.522  | 0.817 | 0.0189 | 0.0098 |  1.622  |  0.0208  |                                                -                                                |
-|                           | test |  4.356  | 1.924 | 0.0486 | 0.0223 |  3.834  |  0.0476  |                                                -                                                |
+|     dataset     |     | RMSE(R) | MAE(R) | RMSE(t) | MAE(t) | Error(R) | Error(t) |                                           checkpoint                                           |
+| :-------------: | :--: | :-----: | :----: | :-----: | :----: | :------: | :------: | :---------------------------------------------------------------------------------------------: |
+| OS_PRNet_clean | val |  0.912  | 0.339 | 0.0078 | 0.0049 |  0.639  |  0.0099  | [Google Drive](https://drive.google.com/file/d/1i6nsSPFriGYxD1rDGTpbtTBYmdQcT8St/view?usp=sharing) |
+|                 | test |  2.247  | 0.652 | 0.0177 | 0.0077 |  1.241  |  0.0154  | [Google Drive](https://drive.google.com/file/d/1LTR4rCT4eQ6JXXOekeUjhXQpwhlh9NEY/view?usp=sharing) |
+| TS_PRNet_clean | val |  1.032  | 0.506 | 0.0085 | 0.0057 |  0.984  |  0.0113  | [Google Drive](https://drive.google.com/file/d/1AdutxYe7FS88uoLMf7V6Mo9Tlb9hSDlF/view?usp=sharing) |
+|                 | test |  2.372  | 0.974 | 0.0146 | 0.0077 |  1.892  |  0.0152  | [Google Drive](https://drive.google.com/file/d/1A-6xTPGPAbmnwbnt81NjhN6Mw9VMHmwN/view?usp=sharing) |
+| OS_PRNet_noise | val |  1.029  | 0.573 | 0.0089 | 0.0061 |  1.077  |  0.0123  | [Google Drive](https://drive.google.com/file/d/1JbBlBW08PQrucbdpp-G-VlWdjlik6tO7/view?usp=sharing) |
+|                 | test |  2.318  | 0.957 | 0.0155 | 0.0078 |  1.809  |  0.0156  | [Google Drive](https://drive.google.com/file/d/154xYpstuQJ0eDk3rqbDShg5P5b17xlry/view?usp=sharing) |
+| TS_PRNet_noise | val |  1.314  | 0.771 | 0.0102 | 0.0074 |  1.490  |  0.0148  | [Google Drive](https://drive.google.com/file/d/1ZzetsjHC4POh8Irr1RfSl8boPJvCQFMx/view?usp=sharing) |
+|                 | test |  2.443  | 1.189 | 0.0181 | 0.0097 |  2.311  |  0.0193  | [Google Drive](https://drive.google.com/file/d/1eHi9pzAmL3jrYGmv6X9xy-8U7hAw9OdI/view?usp=sharing) |
+| OS_RPMNet_clean | val |  0.771  | 0.277 | 0.0154 | 0.0056 |  0.561  |  0.0122  | [Google Drive](https://drive.google.com/file/d/1_wGJTxaezFvb4xqABmFfrIR03Wq2c80U/view?usp=sharing) |
+|                 | test |  3.719  | 1.314 | 0.0392 | 0.0151 |  2.659  |  0.0321  | [Google Drive](https://drive.google.com/file/d/1IQ0DZ_OmaZPErPqm4DJ4NBWfnt1d1YG5/view?usp=sharing) |
+| TS_RPMNet_clean | val |  1.401  | 0.544 | 0.0241 | 0.0095 |  1.128  |  0.0202  | [Google Drive](https://drive.google.com/file/d/1IlUSzGoAXHzon5ZrwLPNBsTuICphhrAO/view?usp=sharing) |
+|                 | test |  4.016  | 1.622 | 0.0419 | 0.0184 |  3.205  |  0.0394  | [Google Drive](https://drive.google.com/file/d/1NJZcfHoXlCFTMVz01ZACiiTMNUEW1QQC/view?usp=sharing) |
+| OS_RPMNet_noise | val |  0.998  | 0.555 | 0.0172 | 0.0078 |  1.079  |  0.0167  | [Google Drive](https://drive.google.com/file/d/1LvhPwrtUs-A2AZWO1YgrvhgcxdZXTen-/view?usp=sharing) |
+|                 | test |  3.572  | 1.570 | 0.0391 | 0.0172 |  3.073  |  0.0359  | [Google Drive](https://drive.google.com/file/d/1xnHcKikXs8D9UuGchwo3YK21vG86zRtp/view?usp=sharing) |
+| TS_RPMNet_noise | val |  1.522  | 0.817 | 0.0189 | 0.0098 |  1.622  |  0.0208  |                                                -                                                |
+|                 | test |  4.356  | 1.924 | 0.0486 | 0.0223 |  3.834  |  0.0476  |                                                -                                                |
 
 ## Citation
 
